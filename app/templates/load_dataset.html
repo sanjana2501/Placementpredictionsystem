@@ -2,14 +2,30 @@
 
 {% block content %}
 
-<h2>Dataset Loading</h2>
+<div class="hero">
 
-<p>
-    The placement dataset has been loaded succesfully.
-</p>
+    <h2>Dataset Loaded Successfully</h2>
 
-<h3>Dataset Summary</h3>
+    <br>
 
-<table border="1" cellpadding="8" >
+    <h3>Dataset Summary</h3>
 
-</table>
+    <ul>
+
+        <li>Total Rows : {{ summary.rows }}</li>
+
+        <li>Total Columns : {{ summary.columns }}</li>
+
+        <li>Target Column : {{ summary.target }}</li>
+
+    </ul>
+
+    <br>
+
+    <h3>First Five Rows</h3>
+
+    {{ first_rows|safe }}
+
+</div>
+
+{% endblock %}

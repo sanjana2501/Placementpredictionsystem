@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placement Prediction System</title>
+{% extends "base.html" %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-
-<body>
-
-<header>
-    <div class="logo">Placement Predictor</div>
-
-    <nav>
-        <a href="/">Home</a>
-        <a href="/predict">Prediction</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+{% block content %}
 
 <section class="hero">
 
@@ -31,9 +12,8 @@
 
         <p>
             Welcome to the Placement Prediction System.
-            This project uses Machine Learning to predict a student's
-            placement chances based on academic performance,
-            aptitude, technical skills, and communication abilities.
+            This project predicts whether a student will be placed
+            based on academic and skill-related features.
         </p>
 
         <div class="info-boxes">
@@ -41,19 +21,19 @@
             <div class="box">
                 <h2>🎓</h2>
                 <h4>Academic Analysis</h4>
-                <p>Analyze student academic performance.</p>
+                <p>Analyze academic performance.</p>
             </div>
 
             <div class="box">
                 <h2>🤖</h2>
                 <h4>ML Prediction</h4>
-                <p>Predict placement chances using ML.</p>
+                <p>Predict placement using Machine Learning.</p>
             </div>
 
             <div class="box">
                 <h2>📊</h2>
-                <h4>Accurate Results</h4>
-                <p>Get quick and reliable predictions.</p>
+                <h4>Results</h4>
+                <p>Fast and accurate predictions.</p>
             </div>
 
         </div>
@@ -62,11 +42,4 @@
 
 </section>
 
-<footer>
-
-    <p>© 2026 Placement Prediction System | Machine Learning Project</p>
-
-</footer>
-
-</body>
-</html>
+{% endblock %}
