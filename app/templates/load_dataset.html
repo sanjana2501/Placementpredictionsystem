@@ -1,31 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h2>Dataset Loading</h2>
+<p>The placement dataset has been loaded successfully.</p>
 
-<div class="hero">
+<h3>Dataset Summary</h3>
+<table border="1" cellpadding="8">
+    <tbody>
+        <tr>
+            <th>Total Records</th>
+            <td>{{ summary.rows }}</td>
+        </tr>
+        <tr>
+            <th>Total Columns</th>
+            <td>{{ summary.columns }}</td>
+        </tr>
+        <tr>
+            <th>Target Variable</th>
+            <td>{{ summary.target }}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
 
-    <h2>Dataset Loaded Successfully</h2>
-
-    <br>
-
-    <h3>Dataset Summary</h3>
-
-    <ul>
-
-        <li>Total Rows : {{ summary.rows }}</li>
-
-        <li>Total Columns : {{ summary.columns }}</li>
-
-        <li>Target Column : {{ summary.target }}</li>
-
-    </ul>
-
-    <br>
-
-    <h3>First Five Rows</h3>
-
-    {{ first_rows|safe }}
-
-</div>
-
+<h3>First Five Records</h3>
+<p>The first five records of the dataset are shown below.</p>
+{{ first_rows | safe }}
 {% endblock %}
